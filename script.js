@@ -1,0 +1,8 @@
+const header = document.querySelector('header');
+
+header.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
