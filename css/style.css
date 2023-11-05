@@ -1,0 +1,163 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Apply a simple font and background color */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Style the header links */
+  header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .current-page {
+    font-weight: bold;
+    color: lightcoral; /* Change this to your desired color */
+    text-decoration: none; /* Remove the underline */
+    border: 2px solid lightcoral; /* Add an outline */
+  }
+
+  header a:hover {
+    color: lightgreen;
+  }
+
+  /* Remove bullet points from the list of links */
+  header ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  /* Style the main content */
+  #main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style the skip link */
+  .skip-link {
+    display: block;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    opacity: 0; /* Hide the link by default */
+    transition: opacity 0.3s; /* Add a transition for smooth visibility change */
+  }
+
+  .skip-link:hover {
+    background-color: #555;
+  }
+
+  .skip-link:focus {
+    opacity: 1; /* Make the link visible on focus */
+  }
+
+  /* Style the individual pet sections */
+  div {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  /* Style the images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #d40000; /* Add a border of your choice of color */
+    padding: 10px;
+    margin: 20px 0;
+    border-top-right-radius: 30px;
+  }
+
+  /* Add a grid layout to the photo gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Style the images within the gallery */
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Style the likes list */
+  ul li {
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  /* Change the line-height for paragraph tags */
+  p {
+    line-height: 1.8; /* Adjust the value as needed using Inspect Element */
+  }
+
+  /* Style the author name */
+  p:last-child {
+    text-align: right;
+    font-style: italic;
+  }
+
+  /* Media query to check for reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .bounce-image:hover {
+      animation: none; /* Disable the animation for users who prefer reduced motion */
+    }
+  }
+
+  /* Define the bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(0);
+    }
+  }
+
+  /* Apply the bounce animation to the image on hover */
+  .bounce-image:hover {
+    animation: bounce 0.4s infinite;
+  }
